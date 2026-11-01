@@ -1,0 +1,34 @@
+<svg viewBox="0 0 100 115" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="droplet">
+      <path d="M50,5 C62,35 85,55 85,75 A35,35 0 0,1 15,75 C15,55 38,35 50,5 Z" />
+    </clipPath>
+    <style>
+      @keyframes wave-left {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-40px); }
+        100% { transform: translateX(0); }
+      }
+      @keyframes wave-right {
+        0% { transform: translateX(-40px); }
+        50% { transform: translateX(0); }
+        100% { transform: translateX(-40px); }
+      }
+      .liquid {
+        transform-origin: center;
+      }
+      .w1 { animation: wave-left 3s ease-in-out infinite; }
+      .w2 { animation: wave-right 3.5s ease-in-out infinite; }
+      .w3 { animation: wave-left 4s ease-in-out infinite; }
+      .w4 { animation: wave-right 3.2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#droplet)">
+    <rect x="0" y="0" width="100" height="120" fill="#10B981" />
+    <path class="liquid w1" d="M-100,35 Q-50,30 0,35 T100,35 T200,35 L200,120 L-100,120 Z" fill="#3B82F6" />
+    <path class="liquid w2" d="M-100,50 Q-50,55 0,50 T100,50 T200,50 L200,120 L-100,120 Z" fill="#EC4899" />
+    <path class="liquid w3" d="M-100,65 Q-50,60 0,65 T100,65 T200,65 L200,120 L-100,120 Z" fill="#F59E0B" />
+    <path class="liquid w4" d="M-100,80 Q-50,85 0,80 T100,80 T200,80 L200,120 L-100,120 Z" fill="#8B5CF6" />
+  </g>
+</svg>
